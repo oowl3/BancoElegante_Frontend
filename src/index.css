@@ -1,0 +1,53 @@
+:root {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow: hidden; /* Prevenimos scroll no deseado */
+  font-family: Roboto;
+}
+
+/* Contenedor principal */
+#root {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex; /* Centrar contenido si lo necesitas */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Canvas ocupa todo el fondo */
+.constellation-canvas {
+  position: fixed; /* Se queda fijo al fondo incluso con scroll */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0; /* Fondo */
+  pointer-events: none; /* Importante: permite clics en elementos sobre él */
+}
+
+/* Contenido de la página encima */
+.app-content {
+  position: relative;
+  z-index: 1; /* Se apila encima del canvas */
+  width: 100%;
+  max-width: 1200px;
+  padding: 2rem;
+  text-align: center;
+}
