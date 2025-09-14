@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap");
+
+
 :root {
   --primary-color: #00ff9b;
   --primary-hover: #00e68a;
@@ -145,4 +148,8 @@ button.secondary:hover:not(:disabled) {
   flex-direction: column;
   gap: 0.75rem;
   margin-top: 1rem;
+}
+
+body, input, button, textarea {
+  font-family: inherit;
 }
